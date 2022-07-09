@@ -4,9 +4,85 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 10px;
+}
+
+body.light {
+    --timer: #4D4C59;
+    --bg-button-title: #6C63FF;
+    --text-times: #C8C8C8;
+    --text-color: #9C9AB6;
+
+    --background: #fff;
+}
+
 body {
     width: 100vw;
     height: 100vh;
+
+    background-color: var(--background);
+
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    margin: 17px 120px;
+}
+
+main img {
+    width: 100%;
+}
+
+.container {
+    text-align: center;
+
+    align-self: center;
+}
+
+.container h1 {
+    font-weight: 500;
+    font-size: 3.6rem;
+
+    color: var(--bg-button-title);
+}
+
+.container .times {
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+
+    font-weight: 300;
+    color: var(--text-times);
+}
+
+.container #timer {
+    font-size: 7.2rem;
+    font-weight: 500;
+
+    color: var(--timer);
+}
+
+.container .text {
+    margin: 1.6rem 0;
+
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+.container button {
+    height: 3.6rem;
+    width: 10rem;
+
+    background-color: var(--bg-button-title);
+    color: var(--background);
+
+    border-radius: 1rem;
+    border: none;
 }
 
 .decorative {
