@@ -1,12 +1,14 @@
 const timer = document.getElementById("timer");
-const appointedDay = new Date(2022, 7, 17, 12, 10, 0);
+const appointedDay = new Date(2022, 7 - 1, 17, 12, 10, 0);
 
 function clock() {
-    let presently = new Date();
-    let d = presently.getDay();
-    let h = presently.getHours();
-    let m = presently.getMinutes();
-    let s = presently.getSeconds();
+    const presently = new Date();
+    const milliseconds = appointedDay - presently;
+    const newTime = new Date(milliseconds);
+    let d = newTime.getDate();
+    let h = newTime.getHours();
+    let m = newTime.getMinutes();
+    let s = newTime.getSeconds();
 
     d = checkTime(d);
     m = checkTime(m);
