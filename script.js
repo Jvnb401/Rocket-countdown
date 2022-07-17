@@ -1,23 +1,33 @@
 const timer = document.getElementById("timer");
-const appointedDay = new Date(2022, 7 - 1, 17, 12, 10, 0);
+const appointedDay = new Date(2022, 7 - 1, 17, 17, 10, 0);
 
 function clock() {
     const presently = new Date();
-    const milliseconds = appointedDay - presently;
-    const newTime = new Date(milliseconds);
-    let d = newTime.getDate();
-    let h = newTime.getHours();
-    let m = newTime.getMinutes();
-    let s = newTime.getSeconds();
+    let d = "00";
+    let h = "00";
+    let m = "00";
+    let s = "00";
 
-    d = checkTime(d);
-    m = checkTime(m);
-    s = checkTime(s);
+    if (presently < appointedDay) {
+        const milliseconds = appointedDay - presently;
+        s = milliseconds / 1000;
+        m = s / 60;
+        h = m / 60;
+        d = h / 24;
+
+        d = checkTime(d, 0);
+        h = checkTime(h, 24);
+        m = checkTime(m, 60);
+        s = checkTime(s, 60);
+    }
     timer.innerHTML = `${d} : ${h} : ${m} : ${s}`;
     setTimeout('clock()', 500);
 }
 
-function checkTime(i) {
+function checkTime(i, limit) {
+    i = (i).toFixed();
+    i = limit == 0 ? i : i % limit;
+
     if (i < 10) {
         i = "0" + i;
     }
