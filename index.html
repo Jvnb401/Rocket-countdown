@@ -31,9 +31,17 @@
             </div>
             <p id="timer">08 : 12 : 44 : 28</p>
             <p class="text">Inscreva-se para saber mais sobre o lançamento</p>
-            <button>inscrever-se</button>
+            <button onclick="Show('subscribe')">inscrever-se</button>
         </div>
         <img src="./images/rocket.svg" alt="imagem ilustrativa de um foguet no espaço">
+
+        <div class="modal hidden" id="subscribe">
+            <form>
+                <label for="email" class="hidden">digite seu email</label>
+                <input type="email" placeholder="exemplo@exemplo.com" />
+                <button onclick="alert('inscrito com sucesso')">inscrever-se</button>
+            </form>
+        </div>
     </main>
 
     <footer>

@@ -1,5 +1,5 @@
 const timer = document.getElementById("timer");
-const appointedDay = new Date(2022, 7 - 1, 17, 17, 10, 0);
+const appointedDay = new Date(2022, 7 - 1, 17, 19, 10, 0);
 
 function clock() {
     const presently = new Date();
@@ -32,6 +32,13 @@ function checkTime(i, limit) {
         i = "0" + i;
     }
     return i;
+}
+
+function Show(obj) {
+    console.log("test")
+    const modal = document.getElementById(obj);
+
+    modal.classList.toggle("hidden")
 }
 
 clock();

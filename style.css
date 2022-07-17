@@ -15,6 +15,7 @@ body.light {
     --text-color: #9C9AB6;
 
     --background: #fff;
+    --background-modal: #fffa;
 }
 
 body {
@@ -24,6 +25,53 @@ body {
     background-color: var(--background);
 
     font-family: 'Poppins', sans-serif;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-modal);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal form {
+    display: grid;
+    justify-items: center;
+    gap: 1.5rem;
+
+    background-color: var(--background);
+    border: 1px solid var(--timer);
+    border-radius: 1.5rem;
+
+    padding: 2rem;
+}
+
+input {
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--bg-button-title);
+}
+
+button {
+    height: 3.6rem;
+    width: 10rem;
+
+    background-color: var(--bg-button-title);
+    color: var(--background);
+
+    border-radius: 1rem;
+    border: none;
 }
 
 main {
@@ -75,16 +123,6 @@ main img {
     font-weight: 300;
 }
 
-.container button {
-    height: 3.6rem;
-    width: 10rem;
-
-    background-color: var(--bg-button-title);
-    color: var(--background);
-
-    border-radius: 1rem;
-    border: none;
-}
 
 .decorative {
     width: 100vw;
