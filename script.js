@@ -1,5 +1,5 @@
 const timer = document.getElementById("timer");
-const appointedDay = new Date(2022, 7 - 1, 17, 19, 10, 0);
+let appointedDay = new Date(2022, 7 - 1, 17, 19, 10, 0);
 
 function clock() {
     const presently = new Date();
@@ -41,4 +41,11 @@ function Show(obj) {
     modal.classList.toggle("hidden")
 }
 
-clock();
+function addCountDown() {
+    const dateTime = document.getElementById("dateTime").value;
+
+    appointedDay = new Date(dateTime);
+
+    clock();
+    Show('time')
+}

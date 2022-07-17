@@ -45,6 +45,10 @@ body {
     justify-content: center;
 }
 
+#time {
+    background-color: var(--background);
+}
+
 .modal form {
     display: grid;
     justify-items: center;
