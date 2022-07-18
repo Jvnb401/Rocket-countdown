@@ -54,8 +54,8 @@ function subscribe() {
     const validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(subscribe)
 
     if (validEmail) {
-        alert('inscrito com sucesso');
+        alert(`inscrito com sucesso\n(lembrando que esse site é meramente um estudo de front-end, por tanto não envia um e-mail ou inscreve)`);
     } else {
-        alert('Por favor, digite um email valido');
+        alert('Por favor, digite um e-mail valido');
     }
 }
