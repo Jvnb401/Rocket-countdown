@@ -47,8 +47,10 @@
         <div class="modal hidden" id="subscribe">
             <form>
                 <label for="email" class="hidden">digite seu email</label>
-                <input type="email" placeholder="exemplo@exemplo.com" />
-                <button onclick="alert('inscrito com sucesso')">inscrever-se</button>
+                <input type="email" id="email" placeholder="exemplo@exemplo.com" />
+                <button onclick="subscribe()">inscrever-se</button>
+
+                <input type="text" required hidden>
             </form>
         </div>
     </main>

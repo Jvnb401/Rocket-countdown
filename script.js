@@ -35,7 +35,6 @@ function checkTime(i, limit) {
 }
 
 function Show(obj) {
-    console.log("test")
     const modal = document.getElementById(obj);
 
     modal.classList.toggle("hidden")
@@ -48,4 +47,15 @@ function addCountDown() {
 
     clock();
     Show('time')
+}
+
+function subscribe() {
+    const subscribe = document.getElementById('email').value;
+    const validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(subscribe)
+
+    if (validEmail) {
+        alert('inscrito com sucesso');
+    } else {
+        alert('Por favor, digite um email valido');
+    }
 }
